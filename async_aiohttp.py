@@ -14,7 +14,7 @@ async def hello(url):
 tasks = []
 
 url = "http://speedtest.ftp.otenet.gr/files/test1Mb.db"
-for i in range(250):
+for i in range(50):
     task = asyncio.ensure_future(hello(url.format(i)))
     tasks.append(task)
 loop.run_until_complete(asyncio.wait(tasks))

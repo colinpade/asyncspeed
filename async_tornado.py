@@ -11,7 +11,7 @@ def handle_request(response):
         ioloop.IOLoop.instance().stop()
 
 http_client = httpclient.AsyncHTTPClient()
-for i in range(0,500):
+for i in range(0,50):
     i += 1
     http_client.fetch('http://speedtest.ftp.otenet.gr/files/test1Mb.db', handle_request, method='HEAD')
 
