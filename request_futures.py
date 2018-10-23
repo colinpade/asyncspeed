@@ -6,11 +6,9 @@ urls = ['http://speedtest.ftp.otenet.gr/files/test1Mb.db'] * 50
 
 session = FuturesSession(executor=ThreadPoolExecutor(max_workers=500))
 
-
 def find_multi_reviews(urls):
     resp = [session.get(url) for url in urls]
     return resp
-
 
 results = find_multi_reviews(urls)
 for i, future in enumerate(results):
